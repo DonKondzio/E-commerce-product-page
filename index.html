@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce page</title>
+    <link rel="icon" href="dist/img/favicon-32x32.png" >
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/style.min.css" />
+    <script src="dist/js/app.min.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="nav">
+        <div class="nav__left-side">
+          <button class="hamburger">
+            <img
+              class="nav__mobile-bars active"
+              src="dist/img/icon-menu.svg"
+              alt="menu bars"
+            />
+            <img
+              class="nav__mobile-close"
+              src="dist/img/icon-close.svg"
+              alt="menu bars"
+            />
+          </button>
+
+          <div class="nav__mobile">
+            <div class="nav__mobile-shadow"></div>
+            <div class="nav__mobile-panel">
+              <ul class="nav__items">
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <img class="nav__logo" src="dist/img/logo.svg" alt="sneakers logo" />
+          <div class="nav__desktop">
+            <ul class="nav__items">
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav__right-side">
+          <button class="nav__cart">
+            <img
+              class="nav__cart-img"
+              src="dist/img/icon-cart.svg"
+              alt="cart"
+            />
+            <p class="count-number">3</p>
+          </button>
+          <img
+            class="nav__avatar"
+            src="dist/img/image-avatar.png"
+            alt="avatar"
+          />
+        </div>
+      </nav>
+
+      <div class="line"></div>
+
+      <main class="main">
+        <div class="slider">
+          <div class="slider-img"></div>
+
+          <button class="slider-arrow slider-arrow--left">
+            <img src="dist/img/icon-previous.svg" alt="left arow" />
+          </button>
+          <button class="slider-arrow slider-arrow--right">
+            <img src="dist/img/icon-next.svg" alt="right arrow" />
+          </button>
+          <div class="thumbnails">
+            <a class="thumbnail" href="#">
+              <img
+                class="thumbnail-img"
+                src="dist/img/image-product-1-thumbnail.jpg"
+                alt="first thumbnail"
+              />
+            </a>
+            <a class="thumbnail" href="#" ">
+              <img
+                class="thumbnail-img"
+                src="dist/img/image-product-2-thumbnail.jpg"
+                alt="second thumbnail"
+              />
+            </a>
+            <a class="thumbnail" href="#" >
+              <img
+                class="thumbnail-img"
+                src="dist/img/image-product-3-thumbnail.jpg"
+                alt="third thumbnail"
+              />
+            </a>
+            <a class="thumbnail" href="#" >
+              <img
+                class="thumbnail-img"
+                src="dist/img/image-product-4-thumbnail.jpg"
+                alt="fourth thumbnail"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="description-container">
+          <p class="company-name">Sneaker Company</p>
+          <h3 class="product-name">Fall Limited Edition Sneakers</h3>
+          <p class="product-description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price-container-main">
+            <div class="price-container-inner">
+              <p class="price">$125.00</p>
+              <p class="discount-percentage">50%</p>
+            </div>
+            <p class="price-old">$250.00</p>
+          </div>
+          <div class="options-container">
+            <div class="count-setter">
+              <button class="count-btn count-btn--minus">
+                <img src="dist/img/icon-minus.svg" alt="minus" />
+              </button>
+              <p class="count">0</p>
+              <button class="count-btn count-btn--plus">
+                <img src="dist/img/icon-plus.svg" alt="plus" />
+              </button>
+            </div>
+            <button class="btn-cart">
+              <img
+                class="btn-cart-img"
+                src="dist/img/icon-cart.svg"
+                alt="cart"
+              />
+              <p class="btn-cart-text">Add to cart</p>
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
