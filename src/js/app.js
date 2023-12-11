@@ -61,6 +61,10 @@ const swipePhotoLeft = (slider) => {
     "style",
     `background-image: url(dist/img/image-product-${currentPhotoNum}.jpg)`
   );
+  slider.classList.add("animate-photo-slide");
+  setTimeout(() => {
+    slider.classList.remove("animate-photo-slide");
+  }, 500);
 };
 
 const swipePhotoRight = (slider) => {
@@ -72,6 +76,10 @@ const swipePhotoRight = (slider) => {
     "style",
     `background-image: url(dist/img/image-product-${currentPhotoNum}.jpg)`
   );
+  slider.classList.add("animate-photo-slide");
+  setTimeout(() => {
+    slider.classList.remove("animate-photo-slide");
+  }, 500);
 };
 
 const displaySelectedThumbnail = () => {
@@ -151,6 +159,16 @@ const switchCart = () => {
   }, 300);
 };
 
+const switchLightBoxPhoto = (e) => {
+  if (largeSlider.classList.contains("active")) {
+    if (e.code === "ArrowLeft") {
+      swipePhotoLeft(largeSliderImg);
+    } else if (e.code === "ArrowRight") {
+      swipePhotoRight(largeSliderImg);
+    }
+  }
+};
+
 const showLightbox = () => {
   largeSlider.classList.add("active");
   largeSliderImg.style.backgroundImage = ` url(dist/img/image-product-${currentPhotoNum}.jpg)`;
@@ -180,7 +198,7 @@ document.addEventListener("keydown", (e) => {
     hideLightbox();
   }
 });
-
+document.addEventListener("keydown", switchLightBoxPhoto);
 allLargeSliderThumbnails.forEach((thumbnail) => {
   thumbnail.addEventListener("click", changePhotoLightbox);
 });

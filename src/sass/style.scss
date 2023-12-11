@@ -71,6 +71,7 @@ body {
     flex-direction: column;
 
     &-img {
+      position: relative;
       width: 100%;
       background-image: url(../../dist/img/image-product-1.jpg);
       background-size: cover;
@@ -78,6 +79,9 @@ body {
       aspect-ratio: 1/1;
       margin-bottom: 3rem;
       border-radius: 1.4rem;
+      &.animate-photo-slide {
+        animation: photo-slide 0.5s ease-out;
+      }
     }
 
     &-thumbnails {
@@ -397,6 +401,9 @@ body {
       background-size: cover;
       background-position: center;
       aspect-ratio: 5/4;
+      &.animate-photo-slide {
+        animation: photo-slide 0.5s ease-out;
+      }
     }
     &-arrow {
       width: 4rem;
@@ -770,5 +777,14 @@ body {
   }
   100% {
     scale: 1;
+  }
+}
+
+@keyframes photo-slide {
+  from {
+    filter: contrast(0);
+  }
+  to {
+    filter: contrast(1);
   }
 }
