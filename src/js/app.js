@@ -28,6 +28,7 @@ const addToCartBtn = document.querySelector(".btn-cart");
 const countPlusBtn = document.querySelector(".count-btn--plus");
 const countMinusBtn = document.querySelector(".count-btn--minus");
 const productsToAddDisplay = document.querySelector(".count");
+const cartCountNum = document.querySelector(".count-number");
 const productCount = document.querySelector(".product-count");
 const productPrice = document.querySelector(".price");
 const totalPrice = document.querySelector(".total-price");
@@ -127,6 +128,8 @@ const addToCart = () => {
     totalPrice.textContent = `$${
       +productPrice.textContent.substring(1) * productsAdded
     }.00`;
+    cartCountNum.classList.add("active");
+    cartCountNum.textContent = productsAdded;
   }
 };
 
