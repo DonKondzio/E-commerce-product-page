@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-commerce page</title>
-    <link rel="icon" href="dist/img/favicon-32x32.png" >
+    <link rel="icon" href="dist/img/favicon-32x32.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,34 +15,22 @@
     <script src="dist/js/app.min.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper-nav">
+      <button class="hamburger">
+        <img
+          class="nav__mobile-bars active"
+          src="dist/img/icon-menu.svg"
+          alt="menu bars"
+        />
+        <img
+          class="nav__mobile-close animate-spin"
+          src="dist/img/icon-close.svg"
+          alt="menu bars"
+        />
+      </button>
+
       <nav class="nav">
         <div class="nav__left-side">
-          <button class="hamburger">
-            <img
-              class="nav__mobile-bars active"
-              src="dist/img/icon-menu.svg"
-              alt="menu bars"
-            />
-            <img
-              class="nav__mobile-close"
-              src="dist/img/icon-close.svg"
-              alt="menu bars"
-            />
-          </button>
-
-          <div class="nav__mobile">
-            <div class="nav__mobile-shadow"></div>
-            <div class="nav__mobile-panel">
-              <ul class="nav__items">
-                <li><a href="#">Collections</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
           <img class="nav__logo" src="dist/img/logo.svg" alt="sneakers logo" />
           <div class="nav__desktop">
             <ul class="nav__items">
@@ -72,8 +60,56 @@
         </div>
       </nav>
 
+      <div class="nav__mobile">
+        <div class="nav__mobile-shadow"></div>
+        <div class="nav__mobile-panel">
+          <ul class="nav__items">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="line"></div>
+    </div>
 
+    <div class="cart">
+      <p class="cart-text">Cart</p>
+      <div class="cart-line"></div>
+      <div class="cart-empty">
+        <p class="cart-empty-text">Your cart is empty</p>
+      </div>
+      <div class="cart-filled">
+        <div class="cart-filled-upper">
+          <img
+            class="cart-filled-upper-photo"
+            src="dist/img/image-product-1-thumbnail.jpg"
+            alt="shoes photo"
+          />
+          <div class="cart-filled-upper-text">
+            <p class="cart-filled-upper-text-name">
+              Fall limited Edition Sneakers
+            </p>
+            <p class="cart-filled-upper-text-price">
+              $125.00 x <span class="product-count">3</span>
+              <span class="total-price">$375.00</span>
+            </p>
+          </div>
+          <button class="cart-filled-upper-trash">
+            <img
+              src="dist/img/icon-delete.svg"
+              alt="trash can"
+              class="cart-filled-upper-trash-img"
+            />
+          </button>
+        </div>
+        <button class="cart-filled-btn">Checkout</button>
+      </div>
+    </div>
+
+    <div class="wrapper-main">
       <main class="main">
         <div class="slider">
           <div class="slider-img"></div>
@@ -84,6 +120,7 @@
           <button class="slider-arrow slider-arrow--right">
             <img src="dist/img/icon-next.svg" alt="right arrow" />
           </button>
+
           <div class="thumbnails">
             <a class="thumbnail" href="#">
               <img
@@ -92,21 +129,21 @@
                 alt="first thumbnail"
               />
             </a>
-            <a class="thumbnail" href="#" ">
+            <a class="thumbnail" href="#">
               <img
                 class="thumbnail-img"
                 src="dist/img/image-product-2-thumbnail.jpg"
                 alt="second thumbnail"
               />
             </a>
-            <a class="thumbnail" href="#" >
+            <a class="thumbnail" href="#">
               <img
                 class="thumbnail-img"
                 src="dist/img/image-product-3-thumbnail.jpg"
                 alt="third thumbnail"
               />
             </a>
-            <a class="thumbnail" href="#" >
+            <a class="thumbnail" href="#">
               <img
                 class="thumbnail-img"
                 src="dist/img/image-product-4-thumbnail.jpg"
@@ -152,6 +189,53 @@
           </div>
         </div>
       </main>
+    </div>
+
+    <div class="slider-large-container">
+      <div class="shadow"></div>
+      <div class="slider-large">
+        <div class="slider-large-img"></div>
+        <button class="slider-large-close">
+          <img src="dist/img/icon-close.svg" alt="close" />
+        </button>
+        <button class="slider-large-arrow slider-large-arrow--left">
+          <img src="dist/img/icon-previous.svg" alt="left arow" />
+        </button>
+
+        <button class="slider-large-arrow slider-large-arrow--right">
+          <img src="dist/img/icon-next.svg" alt="right arrow" />
+        </button>
+        <div class="slider-large-thumbnails">
+          <a class="thumbnail" href="#">
+            <img
+              class="thumbnail-img"
+              src="dist/img/image-product-1-thumbnail.jpg"
+              alt="first thumbnail"
+            />
+          </a>
+          <a class="thumbnail" href="#">
+            <img
+              class="thumbnail-img"
+              src="dist/img/image-product-2-thumbnail.jpg"
+              alt="second thumbnail"
+            />
+          </a>
+          <a class="thumbnail" href="#">
+            <img
+              class="thumbnail-img"
+              src="dist/img/image-product-3-thumbnail.jpg"
+              alt="third thumbnail"
+            />
+          </a>
+          <a class="thumbnail" href="#">
+            <img
+              class="thumbnail-img"
+              src="dist/img/image-product-4-thumbnail.jpg"
+              alt="fourth thumbnail"
+            />
+          </a>
+        </div>
+      </div>
     </div>
   </body>
 </html>
